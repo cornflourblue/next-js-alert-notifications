@@ -77,16 +77,15 @@ function Alert({ id, fade }) {
 
         if (fade) {
             // fade out alert
-            const alertWithFade = { ...alert, fade: true };
-            setAlerts(alerts => alerts.map(x => x.itemId === alert.itemId ? alertWithFade : x));
+            setAlerts(alerts => alerts.map(x => x.itemId === alert.itemId ? { ...x, fade: true } : x));
 
             // remove alert after faded out
             setTimeout(() => {
-                setAlerts(alerts => alerts.filter(x => x !== alertWithFade));
+                setAlerts(alerts => alerts.filter(x => x.itemId !== alert.itemId));
             }, 250);
         } else {
             // remove alert
-            setAlerts(alerts => alerts.filter(x => x !== alert));
+            setAlerts(alerts => alerts.filter(x => x.itemId !== alert.itemId));
         }
     };
 
