@@ -29,7 +29,7 @@ function App({ Component, pageProps }) {
             {/* credits */}
             <div className="text-center mt-4">
                 <p>
-                    <a href="#" target="_top">Next.js - Alert (Toaster) Notifications</a>
+                    <a href="https://jasonwatmore.com/post/2021/08/26/next-js-alert-toaster-notifications" target="_top">Next.js - Alert (Toaster) Notifications</a>
                 </p>
                 <p>
                     <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
